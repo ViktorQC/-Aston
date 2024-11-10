@@ -1,1 +1,198 @@
+Конечно! Вот пример реализации всех трех задач на языке Java 11:
+
+### Задача 1: Сравнение и арифметика двух целых чисел
+
+import java.util.Scanner;
+
+public class Task1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Введите первое целое число:");
+        int a = scanner.nextInt();
+        
+        System.out.println("Введите второе целое число:");
+        int b = scanner.nextInt();
+        
+        // Сравнение чисел
+        if (a > b) {
+            System.out.println("a > b");
+        } else if (a < b) {
+            System.out.println("a < b");
+        } else {
+            System.out.println("a = b");
+        }
+        
+        // Арифметические операции
+        System.out.println("Сумма: " + (a + b));
+        System.out.println("Разность: " + (a - b));
+        System.out.println("Произведение: " + (a * b));
+        
+        if (b != 0) {
+            System.out.println("Частное: " + ((double)a / b)); // Деление на double для точности
+        } else {
+            System.out.println("Ошибка: деление на ноль!");
+        }
+        
+        scanner.close(); // Закрываем сканнер
+    }
+}
+
+
+### Задача 2: Сравнение двух строк
+
+import java.util.Scanner;
+
+public class Task2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Введите первую строку:");
+        String str1 = scanner.nextLine().trim();
+        
+        System.out.println("Введите вторую строку:");
+        String str2 = scanner.nextLine().trim();
+        
+        if (str1.equals(str2)) {
+            System.out.println("Строки идентичны");
+        } else {
+            System.out.println("Строки неидентичны");
+        }
+        
+        scanner.close(); // Закрываем сканнер
+    }
+}
+
+
+### Задача 3: Поиск четных чисел в массиве
+
+public class Task3 {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        
+        System.out.println("Четные числа в массиве:");
+        for (int number : array) {
+            if (number % 2 == 0) {
+                System.out.print(number + " ");
+            }
+        }
+    }
+}
+
+
+### Пояснения к решению:
+
+#### Задача 1:
+1. Используем класс Scanner для получения ввода от пользователя.
+2. После считывания двух чисел a и b, проверяем условия сравнения (if-else) и выводим соответствующий результат.
+3. Затем выполняем четыре арифметических операции: сложение, вычитание, умножение и деление. Для деления используем преобразование типа к double, чтобы избежать ошибок при делении на ноль.
+
+#### Задача 2:
+1. Опять же, применяем Scanner для чтения строк.
+2. Проверяем равенство строк методом equals() и выводим соответствующее сообщение.
+
+#### Задача 3:
+1. Создаем массив целых чисел.
+2. Проходимся циклом по каждому элементу массива и проверяем, является ли он четным (остаток от деления на 2 равен нулю). Если да, то выводим его на экран.
+
+### Как запустить программы:
+1. Сохранить каждый из файлов в отдельный файл с именем класса (например, Task1.java, Task2.java, Task3.java).
+2. Компилировать и запускать каждую программу отдельно:
+      javac Task1.java
+   java Task1
+   
+   Повторить аналогичные шаги для других классов.
+
+Эти программы должны корректно работать и соответствовать всем заданным условиям.
+import java.util.Scanner;
+
+public class Task1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Введите первое целое число:");
+        int a = scanner.nextInt();
+        
+        System.out.println("Введите второе целое число:");
+        int b = scanner.nextInt();
+        
+        // Сравнение чисел
+        if (a > b) {
+            System.out.println("a > b");
+        } else if (a < b) {
+            System.out.println("a < b");
+        } else {
+            System.out.println("a = b");
+        }
+        
+        // Арифметические операции
+        System.out.println("Сумма: " + (a + b));
+        System.out.println("Разность: " + (a - b));
+        System.out.println("Произведение: " + (a * b));
+        
+        if (b != 0) {
+            System.out.println("Частное: " + ((double)a / b)); // Деление на double для точности
+        } else {
+            System.out.println("Ошибка: деление на ноль!");
+        }
+        
+        scanner.close(); // Закрываем сканнер
+    }
+}
+#### Задача 2:Сравнение двух строк
+import java.util.Scanner;
+
+public class Task2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Введите первую строку:");
+        String str1 = scanner.nextLine().trim();
+        
+        System.out.println("Введите вторую строку:");
+        String str2 = scanner.nextLine().trim();
+        
+        if (str1.equals(str2)) {
+            System.out.println("Строки идентичны");
+        } else {
+            System.out.println("Строки неидентичны");
+        }
+        
+        scanner.close(); // Закрываем сканнер
+    }
+}
+### Задача 3: Поиск четных чисел в массиве
+public class Task3 {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        
+        System.out.println("Четные числа в массиве:");
+        for (int number : array) {
+            if (number % 2 == 0) {
+                System.out.print(number + " ");
+            }
+        }
+    }
+}
+адача 1:
+1. Используем класс Scanner для получения ввода от пользователя.
+2. После считывания двух чисел a и b, проверяем условия сравнения (if-else) и выводим соответствующий результат.
+3. Затем выполняем четыре арифметических операции: сложение, вычитание, умножение и деление. Для деления используем преобразование типа к double, чтобы избежать ошибок при делении на ноль.
+
+#### Задача 2:
+1. Опять же, применяем Scanner для чтения строк.
+2. Проверяем равенство строк методом equals() и выводим соответствующее сообщение.
+
+#### Задача 3:
+1. Создаем массив целых чисел.
+2. Проходимся циклом по каждому элементу массива и проверяем, является ли он четным (остаток от деления на 2 равен нулю). Если да, то выводим его на экран.
+
+### Как запустить программы:
+1. Сохранить каждый из файлов в отдельный файл с именем класса (например, Task1.java, Task2.java, Task3.java).
+2. Компилировать и запускать каждую программу отдельно:
+   javac Task1.java
+   java Task1
+   
+
+
 
